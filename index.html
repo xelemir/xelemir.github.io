@@ -1,7 +1,288 @@
-<!DOCTYPE html>
-<html>
+
+<!DOCTYPE HTML>
+<html lang="de">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Jan Malte Gr&uuml;ttefien">
+	<meta name="copyright" content="Copyright &copy; 2020,
+	of this and other documents in this domain. The use of material from this
+	document is granted only for private use. You may not use the e-mail-adresses
+	in this documents for commercial purposes.">
+	<meta name="description" content="Die wildeste Website von Jan">
+	<meta name="keywords" content="Jan Malte Gr&uuml;ttefien">
+	<meta name="generator" content="vi">
+	<script src="https://kit.fontawesome.com/c7751b3169.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/templates/stylesheet1.css">
+	<link rel="icon" href="/media/jan.png">
+
+
+
+
+
+	<style>
+	:root	{
+	--primary-color: #00303F;
+	--secondary-color: #A6C4BC;
+	--bg-color: #CAE4DB;
+	--secondary-color-inverted: #366066;
+	--positive-color: #107E3E;
+	--negative-color: #BB0000;
+	--background-image: url('/media/BG_light.png');
+	--shadow-color: #808080;
+	}
+	[data-theme="dark"] {
+	--primary-color: #000000;
+	--secondary-color: #366066;
+	--bg-color: #00303F;
+	--secondary-color-inverted: #A6C4BC;
+	--positive-color: #32D74B;
+	--negative-color: #FF453A;
+	--background-image: url('/media/BG_dark.png');
+	--shadow-color: #000000;
+	}
+
+@media only screen and (max-width: 600px) {
+    #desktopuser {
+        display: none;
+	}
+	h1 {
+        text-align: center;
+	}
+	.main {
+		margin-left: 5%;
+		margin-right: 5%;
+		text-align: left;
+	}
+	.centered {
+		text-align: center;
+	}
+}
+@media only screen and (min-width: 600px) {
+    #mobileuser {
+        display: none;
+	}
+	.main {
+        padding-left: 15%;
+    }
+}
+
+	hr.line {
+	  width: 80%;
+	  border: 1px solid var(--primary-color);
+	}
+	</style>
+
+    <title>Jan</title>
+
+    <style>
+        textarea:focus,
+        input:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    
+<div class="topnav" id="myTopnav">
+	  <a class="active" href="/"><div class="link">Home</div><hr id="mobileuser" class="line"></a>
+	  <a href="/Contact.php"><div class="link">Contact</div><hr id="mobileuser" class="line"></a>
+	  <a href="/Launchpad.php"><div class="link">Launchpad</div><hr id="mobileuser" class="line"></a>
+	  <a href="/Cybertruck.php"><div class="link">Cybertruck</div><hr id="mobileuser" class="line"></a>
+	  <a href="javascript:void(0);" class="icon" onclick="myTopnavFunction()">
+	  <i class="fa fa-bars"></i>
+	  </a>
+	  <div class="theme-switch-wrapper" style="padding: 25px;">
+	  <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round schatten"></div>
+	  </label>
+	</div>
+	</div>
+	<script>
+		const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+		const currentTheme = localStorage.getItem('theme');
+		
+		if (currentTheme) {
+		    document.documentElement.setAttribute('data-theme', currentTheme);
+		  
+		    if (currentTheme === 'dark') {
+		        toggleSwitch.checked = true;
+		    }
+		}
+		
+		function switchTheme(e) {
+		    if (e.target.checked) {
+		        document.documentElement.setAttribute('data-theme', 'dark');
+		        localStorage.setItem('theme', 'dark');
+		    }
+		    else {        document.documentElement.setAttribute('data-theme', 'light');
+		          localStorage.setItem('theme', 'light');
+		    }    
+		}
+		
+		toggleSwitch.addEventListener('change', switchTheme, false);
+	</script>
+	<script>
+	  function myTopnavFunction() {
+		  var x = document.getElementById("myTopnav");
+		  if (x.className === "topnav") {
+		    x.className += " responsive";
+		  } else {
+		    x.className = "topnav";
+		  }
+	  }
+	</script>
+
+    <div class="main centered">
+        <h1>
+            <p id="welcome"></p>
+        </h1>
+        <br>
+        <br>
+        <script>
+            var today = new Date().getHours();
+            if (today >= 3 && today <= 21) {
+                var x = Math.floor((Math.random() * 4) + 1);
+                if (x == 1) {
+                    nachricht = "Shouldn't you be working for school?";
+                } else if (x == 2) {
+                    nachricht = "Hello there. General Kenobi.";
+                } else if (x == 3) {
+                    nachricht = "Hey Google, fuck off.";
+                } else {
+                    nachricht = "Wassup, cunt?";
+                }
+            } else {
+                var t = Math.floor((Math.random() * 4) + 1);
+                if (t == 1) {
+                    nachricht = "Pretty late, huh?";
+                } else if (t == 2) {
+                    nachricht = "See ya tomorrow.";
+                } else if (t == 3) {
+                    nachricht = "Sleep well.";
+                } else {
+                    nachricht = "Good night.";
+                }
+            }
+            document.getElementById("welcome").innerHTML = nachricht;
+        </script>
+        <script type="text/javascript">
+            function sendForm(ziel) {
+                var inp = document.searchForm.search.value;
+                if (ziel == "Text") {
+                    if ((inp.substring(0, 7) == "http://") || (inp.substring(0, 8) == "https://")) {
+                        ziel = "Adresse";
+                    } else if (inp.substring(0, 4) == "www.") {
+                        ziel = "Adresse";
+                    } else {
+                        ziel = "Google";
+                    }
+                }
+                if (ziel == "Adresse") {
+                    if ((inp.substring(0, 7) == "http://") || (inp.substring(0, 8) == "https://")) {
+                        window.location = (document.searchForm.search.value);
+                    } else {
+                        window.location = ("http://" + document.searchForm.search.value);
+                    }
+                } else if (ziel == "Wikipedia") {
+                    if (inp == "") {
+                        window.location = ("https://de.wikipedia.org/");
+                    } else {
+                        window.location = ("http://de.wikipedia.org/w/index.php?search=" + document.searchForm.search
+                            .value);
+                    }
+                } else if (ziel == "Google") {
+                    window.location = ("https://www.google.de/search?q=" + document.searchForm.search.value +
+                        "&hl=de&ie=UTF-8");
+                } else if (ziel == "Google.com") {
+                    window.location = ("https://www.google.com/search?q=" + document.searchForm.search.value +
+                        "&hl=de&ie=UTF-8");
+                } else if (ziel == "GoogleB") {
+                    window.location = ("https://www.google.de/search?q=" + document.searchForm.search.value +
+                        "&hl=de&ie=UTF-8&tbm=isch");
+                } else if (ziel == "GoogleM") {
+                    window.location = ("https://maps.google.de/maps?q=" + document.searchForm.search.value +
+                        "&hl=de&ie=UTF-8");
+                } else if (ziel == "YouTube") {
+                    if (inp == "") {
+                        window.location = ("https://www.youtube.com/");
+                    } else {
+                        window.location = ("https://www.youtube.com/results?search_query=" + document.searchForm.search
+                            .value + "&hl=de&ie=UTF-8");
+                    }
+                } else if (ziel == "Tesla") {
+                    window.location = ("https://www.tesla.com/de_de");
+                } else if (ziel == "Apple") {
+                    window.location = ("https://www.apple.com/de/");
+                } else if (ziel == "Samsung") {
+                    window.location = ("https://www.samsung.com/de/");
+                } else if (ziel == "schulcloud") {
+                    window.location = ("https://app.stashcat.com/#/chats/");
+                } else if (ziel == "JKG") {
+                    window.location = ("http://www.jkg-stuttgart.de/index.php/de/");
+                } else if (ziel == "WhatsApp") {
+                    window.location = ("https://web.whatsapp.com/");
+                }
+                return false;
+            }
+        </script>
+        <form method="get" action="" name="searchForm" accept-charset="utf-8" autocomplete="off">
+            <input id="Text" class="formular schatten" placeholder="Search with Google" name="search" value=""
+                onkeydown="if (event.keyCode == 13) { sendForm(this.id); return false; }" />
+            <br><br>
+            <p><b>Or use:</b></p>
+            <button id="Wikipedia" type="button" onClick="sendForm(this.id)" class="btn schatten">Wikipedia</button>
+            <!--<button id="Google" type="button" onClick="sendForm(this.id)" class="btn schatten">Google.de</button>-->
+            <span id="desktopuser"><button id="Google.com" type="button" onClick="sendForm(this.id)"class="btn schatten">Google.com</button></span>
+            <button id="GoogleB" type="button" onClick="sendForm(this.id)" class="btn schatten">Image Search</button>
+            <button id="GoogleM" type="button" onClick="sendForm(this.id)" class="btn schatten">Google Maps</button>
+            <button id="YouTube" type="button" onClick="sendForm(this.id)" class="btn schatten">YouTube</button>
+        </form>
+        <br>
+        <p><b>Shortcuts:</b></p>
+        <button id="Tesla" type="button" onClick="sendForm(this.id)" class="btn schatten">Tesla</button>
+        <button id="Apple" type="button" onClick="sendForm(this.id)" class="btn schatten">Apple</button>
+        <!--<button id="Samsung" type="button" onClick="sendForm(this.id)" class="btn schatten">Samsung</button>-->
+        <button id="schulcloud" type="button" onClick="sendForm(this.id)" class="btn schatten">schul.cloud</button>
+        <button id="JKG" type="button" onClick="sendForm(this.id)" class="btn schatten">JKG</button>
+        <!--<span id="desktopuser"><button id="WhatsApp" type="button" onClick="sendForm(this.id)" class="btn schatten">WhatsApp</button></span>-->
+        <br><br>
+    </div>
+    <div id="desktopuser"><br><br>
+    </div>
+
+    <div class="footer">
+		<br>
+		<a href="/privat" class="link">Login</a>&nbsp;&nbsp;
+		<button class="soundbutton footer link" onClick="playAudio('media/sound.mp3')">Copyright © 2021</button>
+
+		<script>
+    	function playAudio(url) {
+  			new Audio(url).play();
+			}
+		</script>
+		&nbsp;&nbsp;
+		<a href="/Imprint.php" class="link">Imprint</a><br>
+		<!--<p id="datum"></p>--><br>
+
+		<a href="https://time.is/Stuttgart" id="time_is_link"></a>
+		<span id="Stuttgart_z704" style="font-size:30px"></span><br>
+		<script src="//widget.time.is/t.js"></script>
+		<script>
+		time_is_widget.init({Stuttgart_z704:{}});
+		</script>
+
+	</div>
+         cookiescript();
+         ?>
 </body>
+
 </html>
