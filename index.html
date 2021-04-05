@@ -210,6 +210,10 @@
                 } else if (ziel == "GoogleM") {
                     window.location = ("https://maps.google.de/maps?q=" + document.searchForm.search.value +
                         "&hl=de&ie=UTF-8");
+
+                } else if (ziel == "Startpage") {
+                    window.location = ("https://www.startpage.com/sp/search?q=" + document.searchForm.search.value);
+                
                 } else if (ziel == "YouTube") {
                     if (inp == "") {
                         window.location = ("https://www.youtube.com/");
@@ -244,6 +248,8 @@
             <button id="GoogleB" type="button" onClick="sendForm(this.id)" class="btn schatten">Image Search</button>
             <button id="GoogleM" type="button" onClick="sendForm(this.id)" class="btn schatten">Google Maps</button>
             <button id="YouTube" type="button" onClick="sendForm(this.id)" class="btn schatten">YouTube</button>
+            <button id="Startpage" type="button" onClick="sendForm(this.id)" class="btn schatten">Startpage</button>
+
         </form>
         <br>
         <p><b>Shortcuts:</b></p>
