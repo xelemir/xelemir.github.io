@@ -1,0 +1,272 @@
+
+<!DOCTYPE HTML>
+<html lang="de">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Jan Malte Gr&uuml;ttefien">
+	<meta name="copyright" content="Copyright &copy; 2020,
+	of this and other documents in this domain. The use of material from this
+	document is granted only for private use. You may not use the e-mail-adresses
+	in this documents for commercial purposes.">
+	<meta name="description" content="Die wildeste Website von Jan">
+	<meta name="keywords" content="Jan Malte Gr&uuml;ttefien">
+	<meta name="generator" content="vi">
+	<script src="https://kit.fontawesome.com/c7751b3169.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="templates/stylesheet1.css">
+	<link rel="icon" href="/media/jan.png">
+
+
+
+
+
+	<style>
+	:root	{
+	--primary-color: #00303F;
+	--secondary-color: #A6C4BC;
+	--bg-color: #CAE4DB;
+	--secondary-color-inverted: #366066;
+	--positive-color: #107E3E;
+	--negative-color: #BB0000;
+	--background-image: url('/media/BG_light.png');
+	--shadow-color: #808080;
+	}
+	[data-theme="dark"] {
+	--primary-color: #000000;
+	--secondary-color: #366066;
+	--bg-color: #00303F;
+	--secondary-color-inverted: #A6C4BC;
+	--positive-color: #32D74B;
+	--negative-color: #FF453A;
+	--background-image: url('/media/BG_dark.png');
+	--shadow-color: #000000;
+	}
+
+@media only screen and (max-width: 600px) {
+    #desktopuser {
+        display: none;
+	}
+	h1 {
+        text-align: center;
+	}
+	.main {
+		margin-left: 5%;
+		margin-right: 5%;
+		text-align: left;
+	}
+	.centered {
+		text-align: center;
+	}
+}
+@media only screen and (min-width: 600px) {
+    #mobileuser {
+        display: none;
+	}
+	.main {
+        padding-left: 15%;
+    }
+}
+
+	hr.line {
+	  width: 80%;
+	  border: 1px solid var(--primary-color);
+	}
+	</style>
+
+      <title>Jan | Projects</title>
+      	<style>
+	:root	{
+	--primary-color: #00303F;
+	--secondary-color: #A6C4BC;
+	--bg-color: #CAE4DB;
+	--secondary-color-inverted: #366066;
+	--positive-color: #107E3E;
+	--negative-color: #BB0000;
+	--background-image: url('/media/BG_light.png');
+	--shadow-color: #808080;
+	}
+	[data-theme="dark"] {
+	--primary-color: #000000;
+	--secondary-color: #366066;
+	--bg-color: #00303F;
+	--secondary-color-inverted: #A6C4BC;
+	--positive-color: #32D74B;
+	--negative-color: #FF453A;
+	--background-image: url('/media/BG_dark.png');
+	--shadow-color: #000000;
+	}
+
+    @media only screen and (max-width: 600px) {
+        #desktopuser {
+            display: none;
+        }
+        h1 {
+            text-align: center;
+        }
+        .main {
+            margin-left: 5%;
+            margin-right: 5%;
+            text-align: left;
+        }
+        .centered {
+            text-align: center;
+        }
+    }
+    @media only screen and (min-width: 600px) {
+        #mobileuser {
+            display: none;
+        }
+        .main {
+            padding-left: 15%;
+        }
+    }
+
+	hr.line {
+	  width: 80%;
+	  border: 1px solid var(--primary-color);
+	}
+
+	</style>
+    </head>
+    <body>
+      	<div class="topnav" id="myTopnav">
+	    <a class="active" href="/"><div class="link">Home</div><hr id="mobileuser" class="line"></a>
+	  <a href="/Contact.php"><div class="link">Contact</div><hr id="mobileuser" class="line"></a>
+	  <a href="/projects.html"><div class="link">Github Projects</div><hr id="mobileuser" class="line"></a>
+	  <a href="javascript:void(0);" class="icon" onclick="myTopnavFunction()">
+	  <i class="fa fa-bars"></i>
+	  </a>
+	  <div class="theme-switch-wrapper" style="padding: 25px;">
+	  <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round schatten"></div>
+	  </label>
+	</div>
+	</div>
+	<script>
+		const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+		const currentTheme = localStorage.getItem('theme');
+		
+		if (currentTheme) {
+		    document.documentElement.setAttribute('data-theme', currentTheme);
+		  
+		    if (currentTheme === 'dark') {
+		        toggleSwitch.checked = true;
+		    }
+		}
+		
+		function switchTheme(e) {
+		    if (e.target.checked) {
+		        document.documentElement.setAttribute('data-theme', 'dark');
+		        localStorage.setItem('theme', 'dark');
+		    }
+		    else {        document.documentElement.setAttribute('data-theme', 'light');
+		          localStorage.setItem('theme', 'light');
+		    }    
+		}
+		
+		toggleSwitch.addEventListener('change', switchTheme, false);
+	</script>
+	<script>
+	  function myTopnavFunction() {
+		  var x = document.getElementById("myTopnav");
+		  if (x.className === "topnav") {
+		    x.className += " responsive";
+		  } else {
+		    x.className = "topnav";
+		  }
+	  }
+	</script>
+    <div class="main">
+        <div id="mobileuser">
+            <h1>My projects</h1>
+        </div>
+        <div id="desktopuser">
+            <h1>My projects</h1>
+        </div>
+    
+        <div id="mobileuser">
+            <br><br>
+            <video controls width="75%%;">
+                <source src="imposter.webm"
+                type="video/webm">
+                <source src="imposter.mp4"
+                type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+            <br><br>
+            <div style="text-align: left;">
+                    The Imposter Game<br><br>
+                    Inspired by the classic Chrome offline game by Google, with Among Us references, coded in the processing language.<br><br>
+                    Find the game 
+                    <a href="https://github.com/xelemir/dino_game_amogus" class="link">here.</a>
+            </div>
+            <br><br>
+        </div>
+        <div id="desktopuser">
+            <br><br>
+            <table class="table">
+                <tr>
+                    <th>
+                        <video controls width="1000px;">
+
+                            <source src="/media/imposter.webm"
+                            type="video/webm">
+                            <source src="/media/imposter.mp4"
+                            type="video/mp4">
+                            Sorry, your browser doesn't support embedded videos.
+
+                        </video>
+                    </th>
+                    <th style="padding: 4%; text-align: left;">
+                        The Imposter Game<br><br>
+                        Inspired by the classic Chrome offline game by Google, with Among Us references, coded in the processing language.<br><br>
+                        Find the game 
+                        <a href="https://github.com/xelemir/dino_game_amogus" class="link">here.</a>
+                    </th>
+                </tr>
+            </table>
+            <br><br>
+        </div>
+    </div>
+
+    <div class="footer">
+	    <br>
+	    <a href="/privat" class="link">Login</a>&nbsp;&nbsp;
+	    <button class="soundbutton footer link" onClick="playAudio('media/sound.mp3')">Copyright © 2021</button>
+		<script>
+            function playAudio(url) {
+                new Audio(url).play();
+                }
+		</script>
+		&nbsp;&nbsp;
+		<a href="/Imprint.php" class="link">Imprint</a><br>
+		<!--<p id="datum"></p>--><br>
+		<a href="https://time.is/Stuttgart" id="time_is_link"></a>
+		<span id="Stuttgart_z704" style="font-size:30px"></span><br>
+		<script src="//widget.time.is/t.js"></script>
+		<script>
+		    time_is_widget.init({Stuttgart_z704:{}});
+		</script>
+	</div>
+	<!--<script>
+		var d = new Date();
+		document.getElementById("datum").innerHTML = d;
+	</script>-->
+    <script type="text/javascript" id="cookieinfo"
+	    src="/templates/cookieinfo.js"
+		data-bg="#A6C4BC"
+		data-fg="#00303F"
+		data-link="#366066"
+		data-cookie="CookieInfoScript"
+		data-text-align="left"
+	       data-close-text="Got it!">
+	</script>
+   </body>
+</html>
