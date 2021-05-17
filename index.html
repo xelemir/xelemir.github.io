@@ -94,7 +94,7 @@
 <div class="topnav" id="myTopnav">
 	  <a class="active" href="/"><div class="link">Home</div><hr id="mobileuser" class="line"></a>
 	  <a href="https://jan.gruettefien.com/Contact.php"><div class="link">Contact</div><hr id="mobileuser" class="line"></a>
-	  <a href="https://jan.gruettefien.com/Launchpad.php"><div class="link">Launchpad</div><hr id="mobileuser" class="line"></a>
+	  <a href="/projects.html"><div class="link">Github Projects</div><hr id="mobileuser" class="line"></a>
 	  <a href="javascript:void(0);" class="icon" onclick="myTopnavFunction()">
 	  <i class="fa fa-bars"></i>
 	  </a>
@@ -210,9 +210,6 @@
                 } else if (ziel == "GoogleM") {
                     window.location = ("https://maps.google.de/maps?q=" + document.searchForm.search.value +
                         "&hl=de&ie=UTF-8");
-
-                } else if (ziel == "Startpage") {
-                    window.location = ("https://www.startpage.com/sp/search?q=" + document.searchForm.search.value);
                 
                 } else if (ziel == "YouTube") {
                     if (inp == "") {
@@ -248,7 +245,6 @@
             <button id="GoogleB" type="button" onClick="sendForm(this.id)" class="btn schatten">Image Search</button>
             <button id="GoogleM" type="button" onClick="sendForm(this.id)" class="btn schatten">Google Maps</button>
             <button id="YouTube" type="button" onClick="sendForm(this.id)" class="btn schatten">YouTube</button>
-            <button id="Startpage" type="button" onClick="sendForm(this.id)" class="btn schatten">Startpage</button>
 
         </form>
         <br>
@@ -258,7 +254,6 @@
         <!--<button id="Samsung" type="button" onClick="sendForm(this.id)" class="btn schatten">Samsung</button>-->
         <button id="schulcloud" type="button" onClick="sendForm(this.id)" class="btn schatten">schul.cloud</button>
         <button id="JKG" type="button" onClick="sendForm(this.id)" class="btn schatten">JKG</button>
-        <!--<span id="desktopuser"><button id="WhatsApp" type="button" onClick="sendForm(this.id)" class="btn schatten">WhatsApp</button></span>-->
         <br><br>
     </div>
     <div id="desktopuser"><br><br>
