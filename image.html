@@ -128,18 +128,7 @@
             }
         }
         </script>
-
-        <div class="main centered">
-            <h1>Civic</h1><br>
-            <script type="text/javascript" src="https://code.createjs.com/easeljs-0.6.0.min.js"></script>
-            <canvas id='canvas' width="1000" height="465"></canvas><br>
-        </div>
-
-        <div class="footer">
-            <a href="https://jan.gruettefien.com/privat" class="link">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://jan.gruettefien.com/Imprint.php" class="link">Imprint</a><br>
-        </div>
-        <script>
+	<script>
             var stage;
 
             function init() {   
@@ -150,58 +139,32 @@
                 stage.enableMouseOver(true);
                 stage.mouseMoveOutside = true; 
                 createjs.Touch.enable(stage);
-                
+
                 var imgList = [
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/1.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/2.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/3.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/4.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/5.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/6.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/7.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/8.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/10.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/11.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/12.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/13.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/14.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/15.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/16.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/17.png", 
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/18.png", 
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/19.png", 
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/20.png", 
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/21.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/22.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/23.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/24.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/25.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/26.png", 
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/27.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/28.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/29.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/30.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/31.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/32.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/33.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/34.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/35.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/36.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/37.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/38.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/39.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/40.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/41.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/42.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/43.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/44.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/45.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/46.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/47.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/48.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/49.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/50.png",
-                        "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/51.png"];  
+                    "https://i.ibb.co/5sfkhfJ/MBAProduct-Demonstration-IMG-1.jpg",
+                    "https://i.ibb.co/vjsKXtz/MBAProduct-Demonstration-IMG-2.jpg",
+                    "https://i.ibb.co/Ytphxv7/MBAProduct-Demonstration-IMG-3.jpg",
+                    "https://i.ibb.co/jM7srTK/MBAProduct-Demonstration-IMG-4.jpg",
+                    "https://i.ibb.co/sm0xgsW/MBAProduct-Demonstration-IMG-5.jpg",
+                    "https://i.ibb.co/QJgp22z/MBAProduct-Demonstration-IMG-6.jpg",
+                    "https://i.ibb.co/kMyZ1mx/MBAProduct-Demonstration-IMG-7.jpg",
+                    "https://i.ibb.co/T4nKsn4/MBAProduct-Demonstration-IMG-8.jpg",
+                    "https://i.ibb.co/Lg6TPsf/MBAProduct-Demonstration-IMG-9.jpg",
+                    "https://i.ibb.co/SR0szwF/MBAProduct-Demonstration-IMG-10.jpg",
+                    "https://i.ibb.co/bXS5bgW/MBAProduct-Demonstration-IMG-11.jpg",
+                    "https://i.ibb.co/J7T8Ss6/MBAProduct-Demonstration-IMG-12.jpg",
+                    "https://i.ibb.co/tx9TLF1/MBAProduct-Demonstration-IMG-13.jpg",
+                    "https://i.ibb.co/ss7DXL9/MBAProduct-Demonstration-IMG-14.jpg",
+                    "https://i.ibb.co/FqJXn3b/MBAProduct-Demonstration-IMG-15.jpg",
+                    "https://i.ibb.co/bm7srmx/MBAProduct-Demonstration-IMG-16.jpg",
+                    "https://i.ibb.co/FsdcJZT/MBAProduct-Demonstration-IMG-17.jpg",
+                    "https://i.ibb.co/sm8CS7q/MBAProduct-Demonstration-IMG-18.jpg",
+                    "https://i.ibb.co/VgY5Xvv/MBAProduct-Demonstration-IMG-19.jpg",
+                    "https://i.ibb.co/gmBVgzH/MBAProduct-Demonstration-IMG-20.jpg",
+                    "https://i.ibb.co/94xGTV4/MBAProduct-Demonstration-IMG-21.jpg",
+                    "https://i.ibb.co/jZxJN7N/MBAProduct-Demonstration-IMG-22.jpg",
+                    "https://i.ibb.co/jVhvxGh/MBAProduct-Demonstration-IMG-23.jpg",
+                    "https://i.ibb.co/wKmkQXy/MBAProduct-Demonstration-IMG-24.jpg"];
                 var images = [], loaded = 0, currentFrame = 0, totalFrames = imgList.length; 
                 var rotate360Interval, start_x;
                 
@@ -252,8 +215,8 @@
                 
                 function update360(dir) {
                     currentFrame+=dir;
-                    if(currentFrame<0) currentFrame = totalFrames-1;
-                    else if(currentFrame>totalFrames-1) currentFrame = 0;
+                    if(currentFrame<0) currentFrame = 0;
+                    else if(currentFrame>totalFrames-1) currentFrame = totalFrames-1;
                     bmp.image = images[currentFrame];
                 }
 
@@ -281,7 +244,7 @@
                     var dx = event.rawX - start_x;
                     var abs_dx = Math.abs(dx);
                     
-                    if(abs_dx>5) {
+                    if(abs_dx>2) {
                         update360(dx/abs_dx);
                         start_x = event.rawX;
                     }
@@ -310,5 +273,15 @@
             // Init
             window.addEventListener('load', init, false);
         </script>
+        <div class="main centered">
+            <h1>MacBook Air</h1><br>
+            <script type="text/javascript" src="https://code.createjs.com/easeljs-0.6.0.min.js"></script>
+            <canvas id="canvas" width="1000" height="465"></canvas><br>
+        </div>
+
+        <div class="footer">
+            <a href="https://jan.gruettefien.com/privat" class="link">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://jan.gruettefien.com/Imprint.php" class="link">Imprint</a><br>
+        </div>
     </body>
 </html>
