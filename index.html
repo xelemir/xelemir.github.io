@@ -1,302 +1,297 @@
 <!DOCTYPE HTML>
 <html lang="de">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta http-equiv="Content-Script-Type" content="text/javascript">
-        <meta http-equiv="Content-Style-Type" content="text/css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Jan Malte Gr&uuml;ttefien">
-        <meta name="copyright" content="Copyright &copy; 2021,
-        of this and other documents in this domain. You may not use the e-mail-adresses
-        in this documents for commercial purposes.">
-        <meta name="description" content="XCX-complex">
-        <meta name="keywords" content="Jan Malte Gr&uuml;ttefien">
-        <meta name="generator" content="vi">
-        <script src="https://kit.fontawesome.com/c7751b3169.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="https://jan.gruettefien.com/templates/stylesheet.css">
-        <link rel="icon" href="https://jan.gruettefien.com/media/jan.png">
-    
-        <style>
-            :root	{
-            --primary-color: #00303F;
-            --secondary-color: #A6C4BC;
-            --bg-color: #CAE4DB;
-            --secondary-color-inverted: #366066;
-            --positive-color: #107E3E;
-            --negative-color: #BB0000;
-            --background-image: url('https://jan.gruettefien.com/media/BG_light.png');
-            --shadow-color: #808080;
-            }
-            [data-theme="dark"] {
-            --primary-color: #000000;
-            --secondary-color: #366066;
-            --bg-color: #00303F;
-            --secondary-color-inverted: #A6C4BC;
-            --positive-color: #32D74B;
-            --negative-color: #FF453A;
-            --background-image: url('https://jan.gruettefien.com/media/BG_dark.png');
-            --shadow-color: #000000;
-            }
 
-            @media only screen and (max-width: 600px) {
-                #desktopuser {
-                    display: none;
-                }
-                h1 {
-                    text-align: center;
-                }
-                .main {
-                    margin-left: 5%;
-                    margin-right: 5%;
-                    text-align: left;
-                }
-                .centered {
-                    text-align: center;
-                }
-            }
-            @media only screen and (min-width: 600px) {
-                #mobileuser {
-                    display: none;
-                }
-                .main {
-                    padding-left: 15%;
-                }
-            }
+<head>
+    	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Jan Malte Gr&uuml;ttefien">
+	<meta name="copyright" content="Copyright &copy; 2020,
+	of this and other documents in this domain. The use of material from this
+	document is granted only for private use. You may not use the e-mail-adresses
+	in this documents for commercial purposes.">
+	<meta name="description" content="Die wildeste Website von Jan">
+	<meta name="keywords" content="Jan Malte Gr&uuml;ttefien">
+	<meta name="generator" content="vi">
+	<script src="https://kit.fontawesome.com/c7751b3169.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://jan.gruettefien.com/templates/stylesheet.css">
+	<link rel="icon" href="https://jan.gruettefien.com/media/jan.png">
 
-            hr.line {
-            width: 80%;
-            border: 1px solid var(--primary-color);
-            }
-        </style>
+    <meta name="google-site-verification" content="wQmEhGAeA9zOpRWdweoyCou9tQX1u7l8AQvJyPv8cKg" />
+    <title>Jan</title>
+    	<style>
+	:root	{
+	--primary-color: #00303F;
+	--secondary-color: #A6C4BC;
+	--bg-color: #CAE4DB;
+	--secondary-color-inverted: #366066;
+	--positive-color: #107E3E;
+	--negative-color: #BB0000;
+	--background-image: url('/media/BG_light.png');
+	--shadow-color: #808080;
+	}
+	[data-theme="dark"] {
+	--primary-color: #000000;
+	--secondary-color: #366066;
+	--bg-color: #00303F;
+	--secondary-color-inverted: #A6C4BC;
+	--positive-color: #32D74B;
+	--negative-color: #FF453A;
+	--background-image: url('/media/BG_dark.png');
+	--shadow-color: #000000;
+	}
 
-        <title>Jan</title>
+@media only screen and (max-width: 600px) {
+    #desktopuser {
+        display: none;
+	}
+	h1 {
+        text-align: center;
+	}
+	.main {
+		margin-left: 5%;
+		margin-right: 5%;
+		text-align: left;
+	}
+	.centered {
+		text-align: center;
+	}
+}
+@media only screen and (min-width: 600px) {
+    #mobileuser {
+        display: none;
+	}
+	.main {
+        padding-left: 15%;
+    }
+}
 
-        <style>
-            textarea:focus,
-            input:focus {
-                outline: none;
-            }
-        </style>
-    </head>
-
-    <body>
-        <div class="topnav" id="myTopnav">
-            <a class="active" href="/"><div class="link">Home</div><hr id="mobileuser" class="line"></a>
-            <a href="https://jan.gruettefien.com/Contact.php"><div class="link">Contact</div><hr id="mobileuser" class="line"></a>
-            <a href="javascript:void(0);" class="icon" onclick="myTopnavFunction()">
-            <i class="fa fa-bars"></i>
-            </a>
-            <div class="theme-switch-wrapper" style="padding: 25px;">
-                <label class="theme-switch" for="checkbox">
-                    <input type="checkbox" id="checkbox" />
-                    <div class="slider round schatten"></div>
-                </label>
-            </div>
-        </div>
-
-        <script>
-            const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-            const currentTheme = localStorage.getItem('theme');
-            if (currentTheme) {
-                document.documentElement.setAttribute('data-theme', currentTheme);
-                if (currentTheme === 'dark') {
-                    toggleSwitch.checked = true;
-                }
-            }
-            function switchTheme(e) {
-                if (e.target.checked) {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                    localStorage.setItem('theme', 'dark');
-                }
-                else {        document.documentElement.setAttribute('data-theme', 'light');
-                    localStorage.setItem('theme', 'light');
-                }    
-            }
-            toggleSwitch.addEventListener('change', switchTheme, false);
-        </script>
-
-        <script>
-        function myTopnavFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
+	hr.line {
+	  width: 80%;
+	  border: 1px solid var(--primary-color);
+	}
+	</style>
+    <style>
+        textarea:focus,
+        input:focus {
+            outline: none;
         }
-        </script>
+    </style>
+</head>
+
+<body>
+    	<div class="topnav" id="myTopnav">
+	  <a class="active" onmouseover="playAudio('media/ht.mp3')" href="/"><div class="link">Home</div><hr id="mobileuser" class="line"></a>
+	  <a href="/Contact.php"><div class="link">Contact</div><hr id="mobileuser" class="line"></a>
+	  <a href="/Launchpad.php"><div class="link">Launchpad</div><hr id="mobileuser" class="line"></a>
+	  <a href="/Cybertruck.php"><div class="link">Cybertruck</div><hr id="mobileuser" class="line"></a>
+	  <a href="javascript:void(0);" class="icon" onclick="myTopnavFunction()">
+	  <i class="fa fa-bars"></i>
+	  </a>
+	  <div class="theme-switch-wrapper" style="padding: 25px;">
+	  <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round schatten"></div>
+	  </label>
+	</div>
+	</div>
 	<script>
-            var stage;
+		const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+		const currentTheme = localStorage.getItem('theme');
+		
+		if (currentTheme) {
+		    document.documentElement.setAttribute('data-theme', currentTheme);
+		  
+		    if (currentTheme === 'dark') {
+		        toggleSwitch.checked = true;
+		    }
+		}
+		
+		function switchTheme(e) {
+		    if (e.target.checked) {
+		        document.documentElement.setAttribute('data-theme', 'dark');
+		        localStorage.setItem('theme', 'dark');
+		    }
+		    else {        document.documentElement.setAttribute('data-theme', 'light');
+		          localStorage.setItem('theme', 'light');
+		    }    
+		}
+		
+		toggleSwitch.addEventListener('change', switchTheme, false);
+	</script>
+	<script>
+	  function myTopnavFunction() {
+		  var x = document.getElementById("myTopnav");
+		  if (x.className === "topnav") {
+		    x.className += " responsive";
+		  } else {
+		    x.className = "topnav";
+		  }
+	  }
+	</script>
 
-            function init() {   
-                var canvas = document.getElementById("canvas");
-                if (!canvas || !canvas.getContext) return;
-                    
-                stage = new createjs.Stage(canvas);  
-                stage.enableMouseOver(true);
-                stage.mouseMoveOutside = true; 
-                createjs.Touch.enable(stage);
-        
-                var imgList = [
-				"https://lh3.googleusercontent.com/W5KqI0_hpGE0k0dGg7zN2JJxFpqAEghH4um2g1Q3qEbT-LMi3vyNiVCNCuRSUErHvLnvaJ9BqAgavxXoot0=w391-h220-rw",
-				"https://lh3.googleusercontent.com/BvJSTK0ENJkXoV83G6FDxAyo1lUtvtHuKea2XduLgFxuYq8f72Qg2qH4AtY-bofxjHxwMZUcQbm4IN2MPOs=w391-h220-rw",
-				"https://lh3.googleusercontent.com/m_xbHQP3a_w74JTU1o3tznk-ox_q_NgzECl4axyMQsH9Xj7UaDucthKCEFcOmDDOzIqwDlzk9kA1pUB8IhM=w391-h220-rw",
-				"https://lh3.googleusercontent.com/SxNU_wUCUn45nrnLlaNq8EJzMDeoozzSzISv8EWi33kxvsPz7apL_JWZVVZiitdq2gZ9DhU5CtPjAg70LW0=w391-h220-rw",
-				"https://lh3.googleusercontent.com/L9uA3XddvPOTAO8Of9RqCyorzC4D8NSd4czjRsx-nrNuWXUZpZlwGY03a6AhMNcYN8iq6eIbwSIpajn3Qc4=w391-h220-rw",
-				"https://lh3.googleusercontent.com/IBSva-yzlx167PQ_XhqyxSVVsaiiczoaA7Rf0W5PsxiUhEblYNVt--JLoR95pKX1mS7YHA1sX5fT3X12X8c=w391-h220-rw",
-				"https://lh3.googleusercontent.com/SC9T1RDiLGJDtnSzetdTfPhzXqfjhS0UingPsRveoUMc9xwviwOSUKJqZ4ktj_lAlix18ZHxuZheN1kaOhA=w391-h220-rw",
-				"https://lh3.googleusercontent.com/F7mI1AC_84doLgxn_5vDAT0nDdx1suTfipmJnuhwC0W8HJsMiwMI7no5usHrIVaex4KrL6ei3zWKczk5KQQ=w391-h220-rw",
-				"https://lh3.googleusercontent.com/aklUCOng70ZzjVOcwM6DUA8g1ZB_azd8JHc8o6440JopeKEbScoyGREA3USRdFvgIGB9v4QOm3Aort8MeWc=w391-h220-rw",
-				"https://lh3.googleusercontent.com/NiTnEDozGpmZORvt1h0ehUFvHf4C_9y2k-c1FiW_gtJMoAz3wDW3xcEE-VwsEDbHoPez4KrKrgNoyJTMslk=w391-h220-rw",
-				"https://lh3.googleusercontent.com/_C249qL69EJtK-VHDwvRzFWDsE3RMU7rodFPFLNgr10Je8h9hDWKmNG-JyB0v8EtnEU44UJA30y9itFeeaE=w391-h220-rw",
-				"https://lh3.googleusercontent.com/Brf_3li9hleNYCjlkgJOJmOizllJARl9hdAZ79DFcguDhBsupIQAgx3-QkZ8YJSpoVg0os2WeFAcEmWgRG4=w391-h220-rw",
-				"https://lh3.googleusercontent.com/Fnhp-SlIVw09la6GvCisrMblGdaQEF-qMpsh8aR5Y_4wireQDq1_4akcKbCjzO_vHhxSCwJ6avxyWFREymU=w391-h220-rw",
-				"https://lh3.googleusercontent.com/Mlzye6pyxBkgdRHFpf9MRKUwlFIFiF1_bQycBJwB9OfS-1wo3Z_usnwMNnrGQ0UXW-jabZ-_MzyKaD7dTx0=w391-h220-rw",
-				"https://lh3.googleusercontent.com/KL7U604wXEiYa8shWYvK-9EA-kd5RBi-1IEddB7sBFng_orr_Hz-IVNh--Uw7GQqN2Bz2NzyAb8bExh6Uo8=w391-h220-rw",
-				"https://lh3.googleusercontent.com/iTXPHbHI83C3I-WY27m1NDF04SZNdpuxN3JtCgAUrFegNTZn_0XkkuD50nJTBGLoEC4ar6CUH7_bZpV5qBY=w391-h220-rw",
-				"https://lh3.googleusercontent.com/p6MS3nZseIZZ8YJcG0gXDDRuMqTyjJM9gbXEBcRR8zacK-hSumlUhFPn_gokhw6A5t9PmZ6LdoX_eeMP_vM=w391-h220-rw",
-				"https://lh3.googleusercontent.com/784m6kiZv5Pj54eT-s3y4xbPz6ijWALrbu35opYzU15UzWwv7O4HLno3gfPeuHnLnemOuYusAgIh9NtDbpQ=w391-h220-rw",
-				"https://lh3.googleusercontent.com/1647i1OccQQuEJF2B-Cw3r3AMP0bOu9P87b_elhot1Op0TyJEpd5irGLZm8HBZOHgX0fP4RXgWh0nQrPRdI=w391-h220-rw",
-				"https://lh3.googleusercontent.com/dI1sMbc1EKJXXcnhxFw-hnLNvthqZpQ38TX468P-QFESDOZQm77wXwXxhUaD_8wJc0aoONjIX1L0COEyCEQ=w391-h220-rw",
-				"https://lh3.googleusercontent.com/NJXK8R_l4xxJMZ0lRMVbSZH1VNhplto36Ol9C4vEkpAb_HzvHkf7f1E_SE0Wli8MUv3EoIQSUADK4rXmZAc=w391-h220-rw",
-				"https://lh3.googleusercontent.com/MiJA4Gyk8d7wuxh72_OMAaczsZjZwBIBsq08Xpz4YqFD76HZUT4HCOdTopGHEALb58by9lsu4Q-QYE5NSjs=w391-h220-rw",
-				"https://lh3.googleusercontent.com/Pod74e3V5nY4ijh8Wz1Jmk-WLOmM-bpAp19GDBb3E061fZYyVA4ylpTD-2Q-hHH1WNIOmvISUjCR5b8dTZk=w391-h220-rw",
-				"https://lh3.googleusercontent.com/UOf_RThyQS9-XzFutEmtPXBiOTVvObaLdiCSkOGsFvcBuvN-SuChWNBv6TCQO74-RfGgyFuLw58169BWO_U=w391-h220-rw"];  
-                
-		var images = [], loaded = 0, currentFrame = 0, totalFrames = imgList.length; 
-                var rotate360Interval, start_x;
-                
-                var bg = new createjs.Shape();
-                stage.addChild(bg);  
-                
-                var bmp = new createjs.Bitmap();	  
-                stage.addChild(bmp);
-                
-                function load360Image() {
-                    var img = new Image();
-                    img.src = imgList[loaded];
-                    img.onload = img360Loaded;
-                    images[loaded] = img;   
+    <div class="main centered">
+        <h1>
+            <p id="welcome"></p>
+        </h1>
+        <br>
+        <br>
+        <script>
+            var today = new Date().getHours();
+            if (today >= 3 && today <= 21) {
+                var x = Math.floor((Math.random() * 4) + 1);
+                if (x == 1) {
+                    nachricht = "Shouldn't you be working for school?";
+                } else if (x == 2) {
+                    nachricht = "Hello there. General Kenobi.";
+                } else if (x == 3) {
+                    nachricht = "Hey Google, fuck off.";
+                } else {
+                    nachricht = "Wassup, cunt?";
                 }
-                
-                function img360Loaded(event) {
-                    loaded++;        
-                    bg.graphics.clear()
-                    
-                    if(loaded==totalFrames) start360();
-                    else load360Image();
+            } else {
+                var t = Math.floor((Math.random() * 4) + 1);
+                if (t == 1) {
+                    nachricht = "Pretty late, huh?";
+                } else if (t == 2) {
+                    nachricht = "See ya tomorrow.";
+                } else if (t == 3) {
+                    nachricht = "Sleep well.";
+                } else {
+                    nachricht = "Good night.";
                 }
-
-                
-                function start360() {
-                    document.body.style.cursor='none';
-                    
-                    // 360 icon
-                    var iconImage = new Image();
-                    iconImage.src = "";
-                    iconImage.onload = iconLoaded;        
-                
-                    // update-draw
-                    update360(0);
-                    
-                    // first rotation
-                    rotate360Interval = setInterval(function(){ if(currentFrame===totalFrames-1) { clearInterval(rotate360Interval); addNavigation(); } update360(1); }, 40);
-                }
-                
-                function iconLoaded(event) {
-                    var iconBmp = new createjs.Bitmap();
-                    iconBmp.image = event.target;
-                    iconBmp.x = 20;
-                    iconBmp.y = canvas.height - iconBmp.image.height - 20;
-                    stage.addChild(iconBmp);
-                }
-                
-                function update360(dir) {
-                    currentFrame+=dir;
-                    if(currentFrame<0) currentFrame = totalFrames-1;
-                    else if(currentFrame>totalFrames-1) currentFrame = 0;
-                    bmp.image = images[currentFrame];
-                }
-
-
-                //------------------------------- 
-                function addNavigation() { 
-                    stage.onMouseOver = mouseOver;
-                    stage.onMouseDown = mousePressed;        
-                    document.body.style.cursor='auto';
-                }
-                
-                function mouseOver(event) {
-                    document.body.style.cursor='pointer';
-                }
-                
-                function mousePressed(event) {
-                    start_x = event.rawX;
-                    stage.onMouseMove = mouseMoved;
-                    stage.onMouseUp = mouseUp;
-                    
-                    document.body.style.cursor='w-resize';        
-                }
-                
-                function mouseMoved(event) {
-                    var dx = event.rawX - start_x;
-                    var abs_dx = Math.abs(dx);
-                    
-                    if(abs_dx>5) {
-                        update360(dx/abs_dx);
-                        start_x = event.rawX;
+            }
+            document.getElementById("welcome").innerHTML = nachricht;
+        </script>
+        <script type="text/javascript">
+            function sendForm(ziel) {
+                var inp = document.searchForm.search.value;
+                if (ziel == "Text") {
+                    if ((inp.substring(0, 7) == "http://") || (inp.substring(0, 8) == "https://")) {
+                        ziel = "Adresse";
+                    } else if (inp.substring(0, 4) == "www.") {
+                        ziel = "Adresse";
+                    } else {
+                        ziel = "Google";
                     }
                 }
-                
-                function mouseUp(event) {
-                    stage.onMouseMove = null;
-                    stage.onMouseUp = null;         
-                    document.body.style.cursor='pointer';
-                }    
-                
-                function handleTick() {	
-                    stage.update();
-                }    
-                
-                document.body.style.cursor='progress';
-                load360Image();
-                
-                
-                // TICKER
-                createjs.Ticker.addEventListener("tick", handleTick);
-                createjs.Ticker.setFPS(60);
-                createjs.Ticker.useRAF = true;
-            }
+                if (ziel == "Adresse") {
+                    if ((inp.substring(0, 7) == "http://") || (inp.substring(0, 8) == "https://")) {
+                        window.location = (document.searchForm.search.value);
+                    } else {
+                        window.location = ("http://" + document.searchForm.search.value);
+                    }
+                } else if (ziel == "Wikipedia") {
+                    if (inp == "") {
+                        window.location = ("https://de.wikipedia.org/");
+                    } else {
+                        window.location = ("http://de.wikipedia.org/w/index.php?search=" + document.searchForm.search
+                            .value);
+                    }
+                } else if (ziel == "Google") {
+                    window.location = ("https://www.google.de/search?q=" + document.searchForm.search.value +
+                        "&hl=de&ie=UTF-8");
+                } else if (ziel == "Google.com") {
+                    window.location = ("https://www.google.com/search?q=" + document.searchForm.search.value +
+                        "&hl=de&ie=UTF-8");
+                } else if (ziel == "GoogleB") {
+                    window.location = ("https://www.google.de/search?q=" + document.searchForm.search.value +
+                        "&hl=de&ie=UTF-8&tbm=isch");
+                } else if (ziel == "GoogleM") {
+                    window.location = ("https://maps.google.de/maps?q=" + document.searchForm.search.value +
+                        "&hl=de&ie=UTF-8");
+                 } else if (ziel == "YouTube") {
+                    if (inp == "") {
+                        window.location = ("https://www.youtube.com/");
+                    } else {
+                        window.location = ("https://www.youtube.com/results?search_query=" + document.searchForm.search
+                            .value + "&hl=de&ie=UTF-8");
+                    } 
 
-            // Init
-            window.addEventListener('load', init, false);
+                } else if (ziel == "Tesla") {
+                    window.location = ("https://www.tesla.com/de_de");
+                } else if (ziel == "Apple") {
+                    window.location = ("https://www.apple.com/de/");
+                } else if (ziel == "Samsung") {
+                    window.location = ("https://www.samsung.com/de/");
+                } else if (ziel == "schulcloud") {
+                    window.location = ("https://app.schul.cloud/#/chats/");
+                } else if (ziel == "JKG") {
+                    window.location = ("http://www.jkg-stuttgart.de/index.php/de/");
+                } else if (ziel == "WhatsApp") {
+                    window.location = ("https://web.whatsapp.com/");
+                }
+                return false;
+            }
         </script>
-        <div class="main centered">
-            <h1>Hallo, Herr Feigl...</h1>
-            <script type="text/javascript" src="https://code.createjs.com/easeljs-0.6.0.min.js"></script>
-            <canvas id="canvas" width="400" height="300"></canvas><br>
-            How To:<br>
-	     Je nach Internetleitung kann es zuerst einige Sekunden dauern, bis über diesem Text das 360° Modell angezeigt wird.<br>
-            Sie können das Gebäude bewegen, indem sie das Bild gedrückt halten und nach links oder rechts ziehen.<br>
-            Optional können sie die Seite bei zu geringer Größe vergrößern (Mac: "⌘" und "+", Windows: "Strg" und "+").
-        </div>
+        <form method="get" action="" name="searchForm" accept-charset="utf-8" autocomplete="off">
+            <input id="Text" class="formular schatten" placeholder="Search with Google" name="search" value=""
+                onkeydown="if (event.keyCode == 13) { sendForm(this.id); return false; }" />
+            <br><br>
+            <p><b>Or use:</b></p>
+            <button id="Wikipedia" type="button" onClick="sendForm(this.id)" class="btn schatten">Wikipedia</button>
+            <!--<button id="Google" type="button" onClick="sendForm(this.id)" class="btn schatten">Google.de</button>-->
+            <span id="desktopuser"><button id="Google.com" type="button" onClick="sendForm(this.id)"class="btn schatten">Google.com</button></span>
+            <button id="GoogleB" type="button" onClick="sendForm(this.id)" class="btn schatten">Image Search</button>
+            <button id="GoogleM" type="button" onClick="sendForm(this.id)" class="btn schatten">Google Maps</button>
+            <button id="YouTube" type="button" onClick="sendForm(this.id)" class="btn schatten">YouTube</button>
+        </form>
         <br>
-        <br>
-        <div class="footer">
-            <a href="https://jan.gruettefien.com/privat" class="link">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://jan.gruettefien.com/Imprint.php" class="link">Imprint</a><br>
-        </div>
-        <script type="text/javascript" id="cookieinfo"
-            src="/templates/cookieinfo.js"
-            data-bg="#A6C4BC"
-            data-fg="#00303F"
-            data-link="#366066"
-            data-cookie="CookieInfoScript"
-            data-text-align="left"
-            data-close-text="Got it!">
-	    </script>
-    </body>
+        <p><b>Shortcuts:</b></p>
+        <button id="Tesla" type="button" onClick="sendForm(this.id)" class="btn schatten">Tesla</button>
+        <button id="Apple" type="button" onClick="sendForm(this.id)" class="btn schatten">Apple</button>
+        <!--<button id="Samsung" type="button" onClick="sendForm(this.id)" class="btn schatten">Samsung</button>-->
+        <button id="schulcloud" type="button" onClick="sendForm(this.id)" class="btn schatten">schul.cloud</button>
+        <button id="JKG" type="button" onClick="sendForm(this.id)" class="btn schatten">JKG</button>
+        <!--<span id="desktopuser"><button id="WhatsApp" type="button" onClick="sendForm(this.id)" class="btn schatten">WhatsApp</button></span>-->
+        <br><br>
+    </div>
+    <div id="desktopuser"><br><br>
+    </div>
+    	<div class="footer">
+		<br>
+		<a href="/privat" class="link">Login</a>&nbsp;&nbsp;
+		<button class="soundbutton footer link" onClick="playAudio('media/sound.mp3')">Copyright © 2021</button>
+
+		<script>
+    			function playAudio(url) {
+  			new Audio(url).play();
+			}
+		</script>
+		&nbsp;&nbsp;
+		<a href="/Imprint.php" class="link">Imprint</a><br>
+		<!--<p id="datum"></p>--><br>
+
+		<a href="https://time.is/Stuttgart" id="time_is_link"></a>
+		<span id="Stuttgart_z704" style="font-size:30px"></span><br>
+		<script src="//widget.time.is/t.js"></script>
+		<script>
+		time_is_widget.init({Stuttgart_z704:{}});
+		</script>
+
+	</div>
+	<!--<script>
+		var d = new Date();
+		document.getElementById("datum").innerHTML = d;
+	</script>-->
+    	<script type="text/javascript" id="cookieinfo"
+		src="/templates/cookieinfo.js"
+		data-bg="#A6C4BC"
+		data-fg="#00303F"
+		data-link="#366066"
+		data-cookie="CookieInfoScript"
+		data-text-align="left"
+	       data-close-text="Got it!">
+	</script>
+    <!--Sound API -->
+    <iframe src="media/silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+    <audio autoplay>
+    <source src="media/ht.mp3" type="audio/mp3">
+    </audio>
+</body>
+
 </html>
