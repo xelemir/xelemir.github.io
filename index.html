@@ -18,6 +18,7 @@
 	<script src="https://kit.fontawesome.com/c7751b3169.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" type="text/css" href="https://jan.gruettefien.com/templates/stylesheet.css">
 	<link rel="icon" href="https://jan.gruettefien.com/media/jan.png">
 
@@ -81,22 +82,39 @@
             outline: none;
         }
     </style>
+    <style>
+        textarea:focus,
+        input:focus {
+            outline: none;
+        }
+    </style>
 </head>
 
 <body>
     	<div class="topnav" id="myTopnav">
-	  <a class="active" onmouseover="playAudio('media/ht.mp3')" href="/"><div class="link">Home</div><hr id="mobileuser" class="line"></a>
-	  <a href="https://jan.gruettefien.com/Message.php"><div class="link">Contact</div><hr id="mobileuser" class="line"></a>
-	  <a href="https://github.com/xelemir"><div class="link">Github</div><hr id="mobileuser" class="line"></a>
-	  <a href="javascript:void(0);" class="icon" onclick="myTopnavFunction()">
-	  <i class="fa fa-bars"></i>
-	  </a>
-	  <div class="theme-switch-wrapper" style="padding: 25px;">
-	  <label class="theme-switch" for="checkbox">
-          <input type="checkbox" id="checkbox" />
-          <div class="slider round schatten"></div>
-	  </label>
-	</div>
+		<div class="theme-switch-wrapper" style="padding: 25px; display:inline-block;">
+		  	<label class="theme-switch" for="checkbox">
+		  		<input type="checkbox" id="checkbox" />
+		  		<div class="slider round schatten"></div>
+		  	</label>
+		</div>
+		<div style="float:right;" id="desktopuser">
+			<a class="active" onmouseover="playAudio('media/ht.mp3')" href="/"><div class="link">Home</div></a>
+			<a href="/Message.php"><div class="link">Contact</div></a>
+			<a href="/Launchpad.php"><div class="link">Launchpad</div></a>
+			<a href="/Olivia.php"><div class="link">Olivia</div></a>
+			<a href="javascript:void(0);" class="icon" onclick="myTopnavFunction()"><span class="material-symbols-rounded">menu</span></a>
+	  	</div>
+
+		<div id="mobileuser" style="float:right;">
+			<a href="javascript:void(0);" class="icon" onclick="myTopnavFunction()"><span class="material-symbols-rounded">menu</span></a>
+		</div>
+		
+		<a id="mobileuser" class="active" onmouseover="playAudio('media/ht.mp3')" href="/"><div class="link">Home</div><hr id="mobileuser" class="line"></a>
+		<a id="mobileuser" href="/Message.php"><div class="link">Contact</div><hr id="mobileuser" class="line"></a>
+		<a id="mobileuser" href="/Launchpad.php"><div class="link">Launchpad</div><hr id="mobileuser" class="line"></a>
+		<a id="mobileuser" href="/Olivia.php"><div class="link">Olivia</div><hr id="mobileuser" class="line"></a>
+	
 	</div>
 	<script>
 		const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
