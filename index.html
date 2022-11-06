@@ -160,18 +160,16 @@
         <script>
             var today = new Date().getHours();
             if (today >= 3 && today <= 21) {
-                var x = Math.floor((Math.random() * 4) + 1);
+                var x = Math.floor((Math.random() * 3) + 1);
                 if (x == 1) {
-                    nachricht = "Shouldn't you be working for school?";
+                    nachricht = "Hey, awesome to see you :)";
                 } else if (x == 2) {
                     nachricht = "Hello there. General Kenobi.";
-                } else if (x == 3) {
-                    nachricht = "Hey Google, fuck off.";
                 } else {
-                    nachricht = "Wassup, cunt?";
+                    nachricht = "Hey Google, play Good Ones by Charli XCX.";
                 }
             } else {
-                var t = Math.floor((Math.random() * 4) + 1);
+                var t = Math.floor((Math.random() * 3) + 1);
                 if (t == 1) {
                     nachricht = "Pretty late, huh?";
                 } else if (t == 2) {
