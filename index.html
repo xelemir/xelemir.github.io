@@ -2,7 +2,7 @@
 <html lang="de">
 
 <head>
-    	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
 	<meta http-equiv="Content-Style-Type" content="text/css">
 	<meta charset="UTF-8">
@@ -18,286 +18,293 @@
 	<script src="https://kit.fontawesome.com/c7751b3169.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" type="text/css" href="https://jan.gruettefien.com/templates/stylesheet.css">
 	<link rel="icon" href="https://jan.gruettefien.com/media/jan.png">
+	<meta name="google-site-verification" content="zHSfXgtnc7OgIMywfiorFDuvJVPEwU5B5FgiCTHje20" />
+	<title>Jan</title>
+	<style>
+		:root {
+			--primary-color: #00303F;
+			--secondary-color: #A6C4BC;
+			--bg-color: #CAE4DB;
+			--secondary-color-inverted: #366066;
+			--positive-color: #107E3E;
+			--negative-color: #BB0000;
+			--background-image: url('/media/BG_light.png');
+			--shadow-color: #808080;
+		}
 
-    <meta name="google-site-verification" content="wQmEhGAeA9zOpRWdweoyCou9tQX1u7l8AQvJyPv8cKg" />
-    <title>Jan</title>
-    	<style>
-	:root	{
-	--primary-color: #00303F;
-	--secondary-color: #A6C4BC;
-	--bg-color: #CAE4DB;
-	--secondary-color-inverted: #366066;
-	--positive-color: #107E3E;
-	--negative-color: #BB0000;
-	--background-image: url('/media/BG_light.png');
-	--shadow-color: #808080;
-	}
-	[data-theme="dark"] {
-	--primary-color: #000000;
-	--secondary-color: #366066;
-	--bg-color: #00303F;
-	--secondary-color-inverted: #A6C4BC;
-	--positive-color: #32D74B;
-	--negative-color: #FF453A;
-	--background-image: url('/media/BG_dark.png');
-	--shadow-color: #000000;
-	}
+		[data-theme="dark"] {
+			--primary-color: #000000;
+			--secondary-color: #366066;
+			--bg-color: #00303F;
+			--secondary-color-inverted: #A6C4BC;
+			--positive-color: #32D74B;
+			--negative-color: #FF453A;
+			--background-image: url('/media/BG_dark.png');
+			--shadow-color: #000000;
+		}
 
-@media only screen and (max-width: 600px) {
-    #desktopuser {
-        display: none;
-	}
-	h1 {
-        text-align: center;
-	}
-	.main {
-		margin-left: 5%;
-		margin-right: 5%;
-		text-align: left;
-	}
-	.centered {
-		text-align: center;
-	}
-}
-@media only screen and (min-width: 600px) {
-    #mobileuser {
-        display: none;
-	}
-	.main {
-        padding-left: 15%;
-    }
-}
+		@media only screen and (max-width: 600px) {
+			#desktopuser {
+				display: none;
+			}
 
-	hr.line {
-	  width: 80%;
-	  border: 1px solid var(--primary-color);
-	}
+			h1 {
+				text-align: center;
+			}
+
+			.main {
+				margin-left: 5%;
+				margin-right: 5%;
+				text-align: left;
+			}
+
+			.centered {
+				text-align: center;
+			}
+		}
+
+		@media only screen and (min-width: 600px) {
+			#mobileuser {
+				display: none;
+			}
+
+			.main {
+				padding-left: 15%;
+			}
+		}
+
+		hr.line {
+			width: 80%;
+			border: 1px solid var(--primary-color);
+		}
 	</style>
-    <style>
-        textarea:focus,
-        input:focus {
-            outline: none;
-        }
-    </style>
-    <style>
-        textarea:focus,
-        input:focus {
-            outline: none;
-        }
-    </style>
+	<style>
+		textarea:focus,
+		input:focus {
+			outline: none;
+		}
+	</style>
+	<style>
+		textarea:focus,
+		input:focus {
+			outline: none;
+		}
+	</style>
 </head>
 
 <body>
-    	<div class="topnav" id="myTopnav">
+	<div class="topnav" id="myTopnav">
 		<div class="theme-switch-wrapper" style="padding: 25px; display:inline-block;">
-		  	<label class="theme-switch" for="checkbox">
-		  		<input type="checkbox" id="checkbox" />
-		  		<div class="slider round schatten"></div>
-		  	</label>
+			<label class="theme-switch" for="checkbox">
+				<input type="checkbox" id="checkbox" />
+				<div class="slider round schatten"></div>
+			</label>
 		</div>
 		<div style="float:right;" id="desktopuser">
-			<a class="active" onmouseover="playAudio('media/ht.mp3')" href="/"><div class="link">Home</div></a>
-			<a href="https://jan.gruettefien.com/Message.php"><div class="link">Contact</div></a>
-			<a href="https://jan.gruettefien.com/Launchpad.php"><div class="link">Launchpad</div></a>
-			<a href="javascript:void(0);" class="icon" onclick="myTopnavFunction()"><span class="material-symbols-rounded">menu</span></a>
-	  	</div>
+			<a class="active" onmouseover="playAudio('media/ht.mp3')" href="/">
+				<div class="link">Home</div>
+			</a>
+			<a href="javascript:void(0);" class="icon" onclick="myTopnavFunction()"><span
+					class="material-symbols-rounded">menu</span></a>
+		</div>
 
 		<div id="mobileuser" style="float:right;">
-			<a href="javascript:void(0);" class="icon" onclick="myTopnavFunction()"><span class="material-symbols-rounded">menu</span></a>
+			<a href="javascript:void(0);" class="icon" onclick="myTopnavFunction()"><span
+					class="material-symbols-rounded">menu</span></a>
 		</div>
-		
-		<a id="mobileuser" class="active" onmouseover="playAudio('media/ht.mp3')" href="/"><div class="link">Home</div><hr id="mobileuser" class="line"></a>
-		<a id="mobileuser" href="https://jan.gruettefien.com/Message.php"><div class="link">Contact</div><hr id="mobileuser" class="line"></a>
-		<a id="mobileuser" href="https://jan.gruettefien.com/Launchpad.php"><div class="link">Launchpad</div><hr id="mobileuser" class="line"></a>
+
+		<a id="mobileuser" class="active" onmouseover="playAudio('media/ht.mp3')" href="/">
+			<div class="link">Home</div>
+			<hr id="mobileuser" class="line">
+		</a>
+		<a id="mobileuser" href="https://jan.gruettefien.com/Message.php">
+			<div class="link">Contact</div>
+			<hr id="mobileuser" class="line">
+		</a>
+		<a id="mobileuser" href="https://jan.gruettefien.com/Launchpad.php">
+			<div class="link">Launchpad</div>
+			<hr id="mobileuser" class="line">
+		</a>
 	</div>
 	<script>
 		const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 		const currentTheme = localStorage.getItem('theme');
-		
+
 		if (currentTheme) {
-		    document.documentElement.setAttribute('data-theme', currentTheme);
-		  
-		    if (currentTheme === 'dark') {
-		        toggleSwitch.checked = true;
-		    }
+			document.documentElement.setAttribute('data-theme', currentTheme);
+
+			if (currentTheme === 'dark') {
+				toggleSwitch.checked = true;
+			}
 		}
-		
+
 		function switchTheme(e) {
-		    if (e.target.checked) {
-		        document.documentElement.setAttribute('data-theme', 'dark');
-		        localStorage.setItem('theme', 'dark');
-		    }
-		    else {        document.documentElement.setAttribute('data-theme', 'light');
-		          localStorage.setItem('theme', 'light');
-		    }    
+			if (e.target.checked) {
+				document.documentElement.setAttribute('data-theme', 'dark');
+				localStorage.setItem('theme', 'dark');
+			}
+			else {
+				document.documentElement.setAttribute('data-theme', 'light');
+				localStorage.setItem('theme', 'light');
+			}
 		}
-		
+
 		toggleSwitch.addEventListener('change', switchTheme, false);
 	</script>
 	<script>
-	  function myTopnavFunction() {
-		  var x = document.getElementById("myTopnav");
-		  if (x.className === "topnav") {
-		    x.className += " responsive";
-		  } else {
-		    x.className = "topnav";
-		  }
-	  }
+		function myTopnavFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
 	</script>
 
-    <div class="main centered">
-        <h1>
-            <p id="welcome"></p>
-        </h1>
-        <br>
-        <br>
-        <script>
-            var today = new Date().getHours();
-            if (today >= 3 && today <= 21) {
-                var x = Math.floor((Math.random() * 3) + 1);
-                if (x == 1) {
-                    nachricht = "Hey, awesome to see you :)";
-                } else if (x == 2) {
-                    nachricht = "Hello there. General Kenobi.";
-                } else {
-                    nachricht = "Hey Google, play Good Ones by Charli XCX.";
-                }
-            } else {
-                var t = Math.floor((Math.random() * 3) + 1);
-                if (t == 1) {
-                    nachricht = "Pretty late, huh?";
-                } else if (t == 2) {
-                    nachricht = "See ya tomorrow.";
-                } else if (t == 3) {
-                    nachricht = "Sleep well.";
-                } else {
-                    nachricht = "Good night.";
-                }
-            }
-            document.getElementById("welcome").innerHTML = nachricht;
-        </script>
-        <script type="text/javascript">
-            function sendForm(ziel) {
-                var inp = document.searchForm.search.value;
-                if (ziel == "Text") {
-                    if ((inp.substring(0, 7) == "http://") || (inp.substring(0, 8) == "https://")) {
-                        ziel = "Adresse";
-                    } else if (inp.substring(0, 4) == "www.") {
-                        ziel = "Adresse";
-                    } else {
-                        ziel = "Google";
-                    }
-                }
-                if (ziel == "Adresse") {
-                    if ((inp.substring(0, 7) == "http://") || (inp.substring(0, 8) == "https://")) {
-                        window.location = (document.searchForm.search.value);
-                    } else {
-                        window.location = ("http://" + document.searchForm.search.value);
-                    }
-                } else if (ziel == "Wikipedia") {
-                    if (inp == "") {
-                        window.location = ("https://de.wikipedia.org/");
-                    } else {
-                        window.location = ("http://de.wikipedia.org/w/index.php?search=" + document.searchForm.search
-                            .value);
-                    }
-                } else if (ziel == "Google") {
-                    window.location = ("https://www.google.de/search?q=" + document.searchForm.search.value +
-                        "&hl=de&ie=UTF-8");
-                } else if (ziel == "Google.com") {
-                    window.location = ("https://www.google.com/search?q=" + document.searchForm.search.value +
-                        "&hl=de&ie=UTF-8");
-                } else if (ziel == "GoogleB") {
-                    window.location = ("https://www.google.de/search?q=" + document.searchForm.search.value +
-                        "&hl=de&ie=UTF-8&tbm=isch");
-                } else if (ziel == "GoogleM") {
-                    window.location = ("https://maps.google.de/maps?q=" + document.searchForm.search.value +
-                        "&hl=de&ie=UTF-8");
-                 } else if (ziel == "YouTube") {
-                    if (inp == "") {
-                        window.location = ("https://www.youtube.com/");
-                    } else {
-                        window.location = ("https://www.youtube.com/results?search_query=" + document.searchForm.search
-                            .value + "&hl=de&ie=UTF-8");
-                    } 
+	<div class="main centered">
+		<h1>
+			<p id="welcome"></p>
+		</h1>
+		<br>
+		<br>
+		<script>
+			var today = new Date().getHours();
+			if (today >= 3 && today <= 21) {
+				var x = Math.floor((Math.random() * 3) + 1);
+				if (x == 1) {
+					nachricht = "Hey, awesome to see you :)";
+				} else if (x == 2) {
+					nachricht = "Hello there. General Kenobi.";
+				} else {
+					nachricht = "Hey Google, play Good Ones by Charli XCX.";
+				}
+			} else {
+				var t = Math.floor((Math.random() * 3) + 1);
+				if (t == 1) {
+					nachricht = "Pretty late, huh?";
+				} else if (t == 2) {
+					nachricht = "See ya tomorrow.";
+				} else if (t == 3) {
+					nachricht = "Sleep well.";
+				} else {
+					nachricht = "Good night.";
+				}
+			}
+			document.getElementById("welcome").innerHTML = nachricht;
+		</script>
+		<script type="text/javascript">
+			function sendForm(ziel) {
+				var inp = document.searchForm.search.value;
+				if (ziel == "Text") {
+					if ((inp.substring(0, 7) == "http://") || (inp.substring(0, 8) == "https://")) {
+						ziel = "Adresse";
+					} else if (inp.substring(0, 4) == "www.") {
+						ziel = "Adresse";
+					} else {
+						ziel = "Google";
+					}
+				}
+				if (ziel == "Adresse") {
+					if ((inp.substring(0, 7) == "http://") || (inp.substring(0, 8) == "https://")) {
+						window.location = (document.searchForm.search.value);
+					} else {
+						window.location = ("http://" + document.searchForm.search.value);
+					}
+				} else if (ziel == "Wikipedia") {
+					if (inp == "") {
+						window.location = ("https://de.wikipedia.org/");
+					} else {
+						window.location = ("http://de.wikipedia.org/w/index.php?search=" + document.searchForm.search
+							.value);
+					}
+				} else if (ziel == "Google") {
+					window.location = ("https://www.google.de/search?q=" + document.searchForm.search.value +
+						"&hl=de&ie=UTF-8");
+				} else if (ziel == "Google.com") {
+					window.location = ("https://www.google.com/search?q=" + document.searchForm.search.value +
+						"&hl=de&ie=UTF-8");
+				} else if (ziel == "GoogleB") {
+					window.location = ("https://www.google.de/search?q=" + document.searchForm.search.value +
+						"&hl=de&ie=UTF-8&tbm=isch");
+				} else if (ziel == "GoogleM") {
+					window.location = ("https://maps.google.de/maps?q=" + document.searchForm.search.value +
+						"&hl=de&ie=UTF-8");
+				} else if (ziel == "YouTube") {
+					if (inp == "") {
+						window.location = ("https://www.youtube.com/");
+					} else {
+						window.location = ("https://www.youtube.com/results?search_query=" + document.searchForm.search
+							.value + "&hl=de&ie=UTF-8");
+					}
 
-                } else if (ziel == "Tesla") {
-                    window.location = ("https://www.tesla.com/de_de");
-                } else if (ziel == "Apple") {
-                    window.location = ("https://www.apple.com/de/");
-                } else if (ziel == "Ilias") {
-                    window.location = ("https://ilias3.uni-stuttgart.de/ilias.php?baseClass=ilDashboardGUI&cmd=jumpToSelectedItems");
-                } else if (ziel == "Campus") {
-                    window.location = ("https://campus.uni-stuttgart.de/cusonline/ee/ui/ca2/app/desktop/#/home?$ctx=lang=de");
-                }
-                return false;
-            }
-        </script>
-        <form method="get" action="" name="searchForm" accept-charset="utf-8" autocomplete="off">
-            <input id="Text" class="formular schatten" placeholder="Search with Google" name="search" value=""
-                onkeydown="if (event.keyCode == 13) { sendForm(this.id); return false; }" />
-            <br><br>
-            <p><b>Or use:</b></p>
-            <button id="Wikipedia" type="button" onClick="sendForm(this.id)" class="btn schatten">Wikipedia</button>
-            <!--<button id="Google" type="button" onClick="sendForm(this.id)" class="btn schatten">Google.de</button>-->
-            <span id="desktopuser"><button id="Google.com" type="button" onClick="sendForm(this.id)"class="btn schatten">Google.com</button></span>
-            <button id="GoogleB" type="button" onClick="sendForm(this.id)" class="btn schatten">Image Search</button>
-            <button id="GoogleM" type="button" onClick="sendForm(this.id)" class="btn schatten">Google Maps</button>
-            <button id="YouTube" type="button" onClick="sendForm(this.id)" class="btn schatten">YouTube</button>
-        </form>
-        <br>
-        <p><b>Shortcuts:</b></p>
-        <button id="Tesla" type="button" onClick="sendForm(this.id)" class="btn schatten">Tesla</button>
-        <button id="Apple" type="button" onClick="sendForm(this.id)" class="btn schatten">Apple</button>
-        <button id="Ilias" type="button" onClick="sendForm(this.id)" class="btn schatten">Ilias Uni</button>
-        <button id="Campus" type="button" onClick="sendForm(this.id)" class="btn schatten">Campus Uni</button>
-        <br><br>
-    </div>
-    <div id="desktopuser"><br><br>
-    </div>
-    	<div class="footer">
+				} else if (ziel == "Tesla") {
+					window.location = ("https://www.tesla.com/de_de");
+				} else if (ziel == "Apple") {
+					window.location = ("https://www.apple.com/de/");
+				} else if (ziel == "Ilias") {
+					window.location = ("https://ilias3.uni-stuttgart.de/ilias.php?baseClass=ilDashboardGUI&cmd=jumpToSelectedItems");
+				} else if (ziel == "Campus") {
+					window.location = ("https://campus.uni-stuttgart.de/cusonline/ee/ui/ca2/app/desktop/#/home?$ctx=lang=de");
+				}
+				return false;
+			}
+		</script>
+		<form method="get" action="" name="searchForm" accept-charset="utf-8" autocomplete="off">
+			<input id="Text" class="formular schatten" placeholder="Search with Google" name="search" value=""
+				onkeydown="if (event.keyCode == 13) { sendForm(this.id); return false; }" />
+			<br><br>
+			<p><b>Or use:</b></p>
+			<button id="Wikipedia" type="button" onClick="sendForm(this.id)" class="btn schatten">Wikipedia</button>
+			<span id="desktopuser"><button id="Google.com" type="button" onClick="sendForm(this.id)"
+					class="btn schatten">Google.com</button></span>
+			<button id="GoogleB" type="button" onClick="sendForm(this.id)" class="btn schatten">Image Search</button>
+			<button id="GoogleM" type="button" onClick="sendForm(this.id)" class="btn schatten">Google Maps</button>
+			<button id="YouTube" type="button" onClick="sendForm(this.id)" class="btn schatten">YouTube</button>
+		</form>
+		<br>
+		<p><b>Shortcuts:</b></p>
+		<button id="Tesla" type="button" onClick="sendForm(this.id)" class="btn schatten">Tesla</button>
+		<button id="Apple" type="button" onClick="sendForm(this.id)" class="btn schatten">Apple</button>
+		<button id="Ilias" type="button" onClick="sendForm(this.id)" class="btn schatten">Ilias</button>
+		<button id="Campus" type="button" onClick="sendForm(this.id)" class="btn schatten">Campus</button>
+		<br><br>
+	</div>
+	<div id="desktopuser"><br><br>
+	</div>
+	<div class="footer">
 		<br>
 		<a href="https://jan.gruettefien.com/privat" class="link">Login</a>&nbsp;&nbsp;
 		<button class="soundbutton footer link" onClick="playAudio('media/sound.mp3')">Copyright © 2021</button>
 
 		<script>
-    			function playAudio(url) {
-  			new Audio(url).play();
+			function playAudio(url) {
+				new Audio(url).play();
 			}
 		</script>
 		&nbsp;&nbsp;
 		<a href="https://jan.gruettefien.com/Message.php" class="link">Imprint</a><br>
-		<!--<p id="datum"></p>--><br>
-
 		<a href="https://time.is/Stuttgart" id="time_is_link"></a>
 		<span id="Stuttgart_z704" style="font-size:30px"></span><br>
 		<script src="//widget.time.is/t.js"></script>
 		<script>
-		time_is_widget.init({Stuttgart_z704:{}});
+			time_is_widget.init({ Stuttgart_z704: {} });
 		</script>
 
 	</div>
-	<!--<script>
-		var d = new Date();
-		document.getElementById("datum").innerHTML = d;
-	</script>-->
-    	<script type="text/javascript" id="cookieinfo"
-		src="/templates/cookieinfo.js"
-		data-bg="#A6C4BC"
-		data-fg="#00303F"
-		data-link="#366066"
-		data-cookie="CookieInfoScript"
-		data-text-align="left"
-	       data-close-text="Got it!">
-	</script>
-    <!--Sound API -->
-    <iframe src="media/silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-    <audio autoplay>
-    <source src="media/ht.mp3" type="audio/mp3">
-    </audio>
+
+	<script type="text/javascript" id="cookieinfo" src="/templates/cookieinfo.js" data-bg="#A6C4BC" data-fg="#00303F"
+		data-link="#366066" data-cookie="CookieInfoScript" data-text-align="left" data-close-text="Got it!">
+		</script>
+
+	<iframe src="media/silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+	<audio autoplay>
+		<source src="media/ht.mp3" type="audio/mp3">
+	</audio>
 </body>
 
 </html>
