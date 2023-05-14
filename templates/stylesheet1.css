@@ -100,6 +100,20 @@
 		background-color: #00000000;
 	}
 
+	.formular {
+		background-color: var(--secondary-color);
+		opacity: 1;
+		font-size: 20px;
+		border-radius: 5px;
+		cursor: text;
+		font-family: 'Nunito', sans-serif;
+		border: none;
+		color: var(--primary-color);
+		padding: 14px;
+		transition: 0.5s;
+		margin: 5px;
+	}
+
 	.btn {
 		border: none;
 		color: var(--primary-color);
@@ -141,19 +155,6 @@
 
 	textarea:focus::placeholder {
 		color: transparent;
-	}
-
-	.formular {
-		background-color: var(--secondary-color);
-		opacity: 1;
-		font-size: 20px;
-		border-radius: 5px;
-		cursor: text;
-		font-family: 'Nunito', sans-serif;
-		border-style: none;
-		color: var(--primary-color);
-		padding: 0.6em;
-		transition: 0.5s;
 	}
 
 	.topnav {
