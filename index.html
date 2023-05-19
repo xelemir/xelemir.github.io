@@ -250,6 +250,8 @@
 					window.location = ("https://ilias3.uni-stuttgart.de/ilias.php?baseClass=ilDashboardGUI&cmd=jumpToSelectedItems");
 				} else if (ziel == "Campus") {
 					window.location = ("https://campus.uni-stuttgart.de/cusonline/ee/ui/ca2/app/desktop/#/home?$ctx=lang=de");
+				} else if (ziel == "Mercedes") {
+					window.location = ("https://www.mercedes-benz.de/passengercars/configurator.html");
 				}
 				return false;
 			}
@@ -268,6 +270,7 @@
 		</form>
 		<br>
 		<p><b>Shortcuts:</b></p>
+		<button id="Mercedes" type="button" onClick="sendForm(this.id)" class="btn schatten">Mercedes</button>
 		<button id="Tesla" type="button" onClick="sendForm(this.id)" class="btn schatten">Tesla</button>
 		<button id="Apple" type="button" onClick="sendForm(this.id)" class="btn schatten">Apple</button>
 		<button id="Ilias" type="button" onClick="sendForm(this.id)" class="btn schatten">Ilias</button>
